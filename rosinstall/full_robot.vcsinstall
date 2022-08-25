@@ -1,0 +1,41 @@
+repositories:
+  DynamixelSDK:
+    type: git
+    url: git@github.com:si-machines/DynamixelSDK.git
+    version: fix-cpu-hog
+  armpy:
+    type: git
+    url: git@github.com:AABL-Lab/armpy.git
+    version: main
+  dynamixel-workbench:
+    type: git
+    url: git@github.com:si-machines/dynamixel-workbench.git
+    version: master
+  dynamixel-workbench-msgs:
+    type: git
+    url: git@github.com:si-machines/dynamixel-workbench-msgs.git
+    version: master
+  epos_hardware:
+    type: git
+    url: git@github.com:RIVeR-Lab/epos_hardware.git
+    version: kinetic-devel
+  hlpr_jaco_trajectory_action_server:
+    type: git
+    url: git@github.com:AABL-Lab/hlpr_jaco_trajectory_action_server.git
+    version: kinetic-devel
+  kinova-ros:
+    type: git
+    url: git@github.com:Kinovarobotics/kinova-ros.git
+    version: melodic-devel
+  pan_tilt:
+    type: git
+    url: git@github.com:AABL-Lab/pan_tilt.git
+    version: master
+  poli2:
+    type: git
+    url: git@github.com:AABL-Lab/poli2.git
+    version: aabl-refactor
+  robotiq_85_gripper:
+    type: git
+    url: git@github.com:AABL-Lab/robotiq_85_gripper.git
+    version: master
