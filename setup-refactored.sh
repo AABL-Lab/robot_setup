@@ -193,7 +193,8 @@ sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install -yq \
   apt-transport-https \
   apt-utils \
-  wget
+  wget \
+  curl
 
 ################################################################################
 ## E. VARIABLES
@@ -218,7 +219,7 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 ## Required for all machines and users.
 ##------------------------------------------------------------------------------
 #sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-#sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+#curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 #sudo apt-get update
 #sudo apt-get install -yq \
 #  python-catkin-tools \
@@ -317,7 +318,7 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 
 ##------------------------------------------------------------------------------
 ## Clone all of the relevant repositories using vcstool
-#vcs import https://raw.githubusercontent.com/AABL-Lab/robot_setup/master/rosinstall/full_robot.vcsinstall
+#vcs import --input https://raw.githubusercontent.com/AABL-Lab/robot_setup/master/rosinstall/full_robot.vcsinstall
 
 ##------------------------------------------------------------------------------
 ## Onboard Robot Machine Setup (Main Acount)
