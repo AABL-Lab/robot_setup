@@ -165,36 +165,36 @@ exit 1
 ## (End of Blocker)
 ## Bash Definitions
 ##------------------------------------------------------------------------------
-set -ev
+#set -ev
 
 ##------------------------------------------------------------------------------
 ## A basic check to get sudo permission early
 ##------------------------------------------------------------------------------
-sudo echo "Now running with superuser permissions"
+#sudo echo "Now running with superuser permissions"
 
 ##------------------------------------------------------------------------------
 ## A basic check to the user to make sure this will work.
 ##------------------------------------------------------------------------------
-echo "You must have a GitHub user account with pull access to the" \
-     " AABL-Lab organization."
-read -p "Press enter to continue with installation. It may take some time."
+#echo "You must have a GitHub user account with pull access to the" \
+#     " AABL-Lab organization."
+#read -p "Press enter to continue with installation. It may take some time."
 
 
 ##------------------------------------------------------------------------------
 ## Force starting in the home directory
 ##------------------------------------------------------------------------------
-cd ${HOME}
+#cd ${HOME}
 
 ##------------------------------------------------------------------------------
 ## Basic Utilities
 ## Prepare your apt repository and install crucial dependencies
 ##------------------------------------------------------------------------------
-sudo apt-get update && sudo apt-get -y upgrade
-sudo apt-get install -yq \
-  apt-transport-https \
-  apt-utils \
-  wget \
-  curl
+#sudo apt-get update && sudo apt-get -y upgrade
+#sudo apt-get install -yq \
+#  apt-transport-https \
+#  apt-utils \
+#  wget \
+#  curl
 
 ################################################################################
 ## E. VARIABLES
@@ -204,7 +204,7 @@ sudo apt-get install -yq \
 ## This is where your ROS packages will go. If you'd like, you can change this,
 ## but we suggest using the default.
 ##------------------------------------------------------------------------------
-WORKSPACE_PATH="${HOME}/catkin_ws/src"
+#WORKSPACE_PATH="${HOME}/catkin_ws/src"
 
 
 ################################################################################
@@ -222,10 +222,10 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 #curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 #sudo apt-get update
 #sudo apt-get install -yq \
-#  python-catkin-tools \
-#  python-wstool \
-#  python-vcstool \
-#  python-pip \
+#  python3-catkin-tools \
+#  python3-wstool \
+#  python3-vcstool \
+#  python3-pip \
 #  ros-kinetic-desktop-full
 #sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
 #sudo rosdep init
@@ -244,12 +244,12 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 ## These packages allow easily teleoperating the robot using the keyboard or a
 ## joystick.
 #sudo apt-get install -yq \
-#  ros-kinetic-teleop-twist-joy \
-#  ros-kinetic-teleop-twist-keyboard
+#  ros-noetic-teleop-twist-joy \
+#  ros-noetic-teleop-twist-keyboard
 
 ## Required to communicate with peripherals such as the face LEDs.
 #sudo apt-get install -yq \
-#  ros-kinetic-rosserial-python
+#  ros-noetic-rosserial-python
 
 ## chrony ensures your clock is synchronized with the others on the network
 #sudo apt-get install -yq chrony
@@ -267,7 +267,7 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 #  emacs \
 #  geany \
 #  sublime-text \
-#  terminator \
+#terminator \
 #  vim
 ## Set the default settings for gedit to be OK for programming
 #gsettings set org.gnome.gedit.preferences.editor auto-indent true
@@ -347,7 +347,7 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 ## Required for all machines and users
 ##------------------------------------------------------------------------------
 ## Automatically find and install needed dependencies
-#rosdep install --from-paths . --ignore-src --rosdistro=kinetic -y
+#rosdep install --from-paths . --ignore-src --rosdistro=noetic -y
 
 ## Build your workspace
 #cd ..
