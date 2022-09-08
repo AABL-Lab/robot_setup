@@ -212,9 +212,9 @@ exit 1
 ################################################################################
 ##------------------------------------------------------------------------------
 ## Install ROS
-## The commands below will install ROS Kinetic.
+## The commands below will install ROS Noetic.
 ## These are the same steps that are listed at the website
-## http://wiki.ros.org/kinetic/Installation/Ubuntu.
+## http://wiki.ros.org/noetic/Installation/Ubuntu.
 ## Also installs catkin tools, which is a better version of catkin_make
 ## Required for all machines and users.
 ##------------------------------------------------------------------------------
@@ -226,11 +226,12 @@ exit 1
 #  python3-wstool \
 #  python3-vcstool \
 #  python3-pip \
-#  ros-kinetic-desktop-full
+#  python3-rosdep \
+#  ros-noetic-desktop-full
 #sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
 #sudo rosdep init
-#rosdep update --include-eol-distros
-#source /opt/ros/kinetic/setup.bash
+#rosdep update
+#source /opt/ros/noetic/setup.bash
 
 ## Install other ROS-specific system dependencies
 #sudo apt-get install -yq \
@@ -358,7 +359,7 @@ exit 1
 
 ## Add useful shortcuts to your bashrc so they are automatically accessible
 ## For more details, read shortcuts.bash (at the path below).
-#echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+#echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 #WORKSPACE_ROOT="$(dirname "$WORKSPACE_PATH")"
 #echo "source ${WORKSPACE_ROOT}/devel/setup.bash" >> ~/.bashrc
 #echo "source ${HOME}/robot_setup/shortcuts.bash" >> ~/.bashrc
