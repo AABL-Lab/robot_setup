@@ -9,7 +9,7 @@ repositories:
     version: main
   dynamixel-workbench:
     type: git
-    url: git@github.com:si-machines/dynamixel-workbench.git
+    url: git@github.com:AABL-Lab/dynamixel-workbench.git
     version: master
   dynamixel-workbench-msgs:
     type: git
@@ -19,6 +19,10 @@ repositories:
     type: git
     url: git@github.com:RIVeR-Lab/epos_hardware.git
     version: kinetic-devel
+  face:
+    type: git
+    url: git@github.com:AABL-Lab/face.git
+    version: master
   hlpr_jaco_trajectory_action_server:
     type: git
     url: git@github.com:AABL-Lab/hlpr_jaco_trajectory_action_server.git
@@ -30,6 +34,10 @@ repositories:
   pan_tilt:
     type: git
     url: git@github.com:AABL-Lab/pan_tilt.git
+    version: master
+  pillar:
+    type: git
+    url: git@github.com:AABL-Lab/pillar.git
     version: master
   poli2:
     type: git
