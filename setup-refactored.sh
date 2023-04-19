@@ -319,7 +319,7 @@ exit 1
 
 ##------------------------------------------------------------------------------
 ## Clone all of the relevant repositories using vcstool
-#vcs import --input https://raw.githubusercontent.com/AABL-Lab/robot_setup/master/rosinstall/full_robot.vcsinstall
+#vcs import --input https://raw.githubusercontent.com/AABL-Lab/robot_setup/noetic-devel/rosinstall/full_robot.vcsinstall
 
 ##------------------------------------------------------------------------------
 ## Onboard Robot Machine Setup (Main Acount)
