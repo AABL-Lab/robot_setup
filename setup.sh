@@ -443,6 +443,10 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 #sudo rm -f /etc/udev/rules.d/10-local.rules
 #sudo ln -s ${HOME}/robot_setup/udev/udev.rules \
 #  /etc/udev/rules.d/10-local.rules
+## add udev rule for gripper
+#sudo rm -f /etc/udev/rules.d/90-ft232-gripper.rules
+#sudo ln -s ${WORKSPACE_PATH}/kinova-ros/kinova_driver/udev/90-ft232-gripper.rules \
+#  /etc/udev/rules.d/90-ft232-gripper.rules
 
 ## Refresh the UDEV rules
 #sudo udevadm control --reload-rules
