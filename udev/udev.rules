@@ -16,6 +16,13 @@ ACTION=="add" \
 , ATTRS{idProduct}=="0043" \
 , MODE:="666" \
 , SYMLINK+="tty_pillar"
+ACTION=="add" \
+, SUBSYSTEM=="tty" \
+, ATTRS{idVendor}=="0403" \
+, ATTRS{idProduct}=="6001" \
+, GROUP="dialout" \
+, MODE="666" \
+, SYMLINK+="tty_gripper"
 
 # Currently unused
 # ACTION=="add" \
