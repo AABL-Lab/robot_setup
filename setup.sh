@@ -365,6 +365,9 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 ## If you clone the packages above you should also uncomment this line.
 #sudo apt-get purge ros-kinetic-dynamixel-workbench-toolbox
 
+# If you are using noetic, you may need to get this package and move qt_build, qt_ros, and qt_create into catkin/src
+git clone https://github.com/stonier/qt_ros.git
+
 
 ##------------------------------------------------------------------------------
 ## HLP-R Code Installation
