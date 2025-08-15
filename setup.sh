@@ -332,6 +332,7 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 ## Required for all machines and users.
 ##------------------------------------------------------------------------------
 #git clone https://github.com/si-machines/poli2.git -b master
+# If catkin complains about poli_pan_tilt AND you are ONLY using the arm, it's OK to delete it.
 ##rm ${HOME}/catkin_ws/src/poli2/poli_pan_tilt/config/tilt_controller.yaml #doesn't seem to exist
 ##ln -s ${HOME}/robot_setup/${ROBOT_OVERALL_NAME}/tilt_controller.yaml ${HOME}/catkin_ws/src/poli2/poli_pan_tilt/config/tilt_controller.yaml #doesn't seem to exist
 
@@ -359,6 +360,7 @@ WORKSPACE_PATH="${HOME}/catkin_ws/src"
 #git clone https://github.com/RIVeR-Lab/epos_hardware.git -b kinetic-devel
 ## controls head pan motor (side to side)
 #git clone https://github.com/si-machines/DynamixelSDK.git -b fix-cpu-hog
+# Note: If you're just using the arm (and not the robot), you ONLY need dynamixel-workbench-msgs.
 #git clone https://github.com/si-machines/dynamixel-workbench.git -b master
 #git clone https://github.com/si-machines/dynamixel-workbench-msgs.git -b master
 ## Delete a conflicting version of the dynamixel code that comes with apt-get
